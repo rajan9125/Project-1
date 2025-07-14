@@ -5,6 +5,13 @@ module "azurerm_resource_group" {
   resource_group_location = "East US"
 
 }
+module "azurerm_resource_group" {
+  source = "../Child/azurerm_resource_group"
+
+  resour_group_name       = "project-9125-sqlserver1"
+  resource_group_location = "East US"
+
+}
 
 module "azurerm_mssql_server" {
 
